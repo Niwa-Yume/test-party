@@ -119,3 +119,45 @@ body {
       width: 100%;
     }
   }
+
+  .item-list {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le padding par défaut */
+    background-color: #2c2c2c; /* Fond sombre */
+    color: #ffffff; /* Couleur de texte blanche */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 10px; /* Ajoute un peu de padding */
+    border: 1px solid #00ffff; /* Ajout d'une bordure pour la liste */
+    font-family: 'Arial', sans-serif; /* Police pour une meilleure lisibilité */
+  }
+  
+  .item {
+    padding: 15px; /* Ajoute du padding autour de chaque élément */
+    border-bottom: 1px solid #444; /* Ligne de séparation entre les éléments */
+    display: flex; /* Utilisation de flex pour aligner les boutons */
+    justify-content: space-between; /* Espacement entre le texte et les boutons */
+    align-items: center; /* Alignement vertical */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+  }
+  
+  .item:hover {
+    background-color: #333333; /* Couleur de fond au survol */
+  }
+  
+  .item-category {
+    font-weight: bold; /* Met en gras la catégorie */
+    text-transform: capitalize; /* Met la première lettre en majuscule */
+    margin-right: 10px; /* Espacement à droite */
+  }
+  
+  .item-description {
+    font-size: 0.9em; /* Taille de police légèrement réduite pour la description */
+    color: #cccccc; /* Couleur de texte pour la description */
+  }
+  
+  /* Styles pour les boutons */
+  button {
+    margin-left: 10px; /* Espacement entre les boutons */
+    padding: 10px; /* Ajustement du padding pour les boutons */
+    font-size: 0.9em;
+  }

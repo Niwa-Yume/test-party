@@ -35,9 +35,12 @@
   </form>
 
   <h2>Items List:</h2>
-  <ul>
-    <li *ngFor="let item of items">
-      {{ item.name }} ({{ item.category }}) - {{ item.description }} (Quantity: {{ item.quantity }})
+  <ul class="item-list">
+    <li *ngFor="let item of items" class="item">
+      <span class="item-category">{{ item.category }}</span>
+      <span>{{ item.name }} - <span class="item-description">{{ item.description }}</span> (Quantity: {{ item.quantity }})</span>
+      <button (click)="removeItem(item)">Supprimer</button>
+      <button (click)="increaseQuantity(item)">Ajouter + 1 en quantité</button>
     </li>
   </ul>
 </div>

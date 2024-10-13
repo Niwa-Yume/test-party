@@ -38,16 +38,37 @@ export class AppComponent {
 
   items: Item[] = [];
 
+  constructor() {
+    this.loadItems(); // Charger les éléments depuis le localStorage au démarrage
+  }
+
   onSubmit() {
-
     if (this.name && this.newItem.name && this.newItem.quantity > 0) {
-
       this.items.push({ ...this.newItem });
-
+      this.saveItems(); // Sauvegarder les éléments dans le localStorage
       this.newItem = { name: '', category: 'Food', description: '', quantity: 1 };
-
     }
+  }
 
+  removeItem(item: Item) {
+    this.items = this.items.filter(i => i !== item);
+    this.saveItems(); // Sauvegarder les éléments après suppression
+  }
+
+  increaseQuantity(item: Item) {
+    item.quantity++;
+    this.saveItems(); // Sauvegarder les éléments après augmentation de quantité
+  }
+
+  saveItems() {
+    localStorage.setItem('items', JSON.stringify(this.items)); // Convertir les éléments en JSON et les sauvegarder
+  }
+
+  loadItems() {
+    const storedItems = localStorage.getItem('items'); // Récupérer les éléments du localStorage
+    if (storedItems) {
+      this.items = JSON.parse(storedItems); // Convertir le JSON en tableau d'objets
+    }
   }
 
 }
