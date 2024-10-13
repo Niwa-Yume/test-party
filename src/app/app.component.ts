@@ -40,6 +40,7 @@ export class AppComponent {
 
   constructor() {
     this.loadItems(); // Charger les éléments depuis le localStorage au démarrage
+    window.addEventListener('storage', this.syncItems.bind(this)); // Écouter les changements de localStorage
   }
 
   onSubmit() {
@@ -68,6 +69,12 @@ export class AppComponent {
     const storedItems = localStorage.getItem('items'); // Récupérer les éléments du localStorage
     if (storedItems) {
       this.items = JSON.parse(storedItems); // Convertir le JSON en tableau d'objets
+    }
+  }
+
+  syncItems(event: StorageEvent) {
+    if (event.key === 'items') {
+      this.items = JSON.parse(event.newValue || '[]'); // Mettre à jour les éléments avec les nouvelles données
     }
   }
 

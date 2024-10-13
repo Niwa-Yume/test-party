@@ -2,49 +2,49 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
+}
+
+.container {
+    max-width: 600px; /* Limiter la largeur pour les écrans plus petits */
+    margin: 20px auto; /* Réduire la marge pour les petits écrans */
+    padding: 20px; /* Réduire le padding pour un look plus compact */
     background-color: #111111;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
-  
-  h1, h2 {
+}
+
+h1, h2 {
     text-align: center;
     color: #00ffff;
     font-weight: 300;
     letter-spacing: 2px;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-  }
-  
-  h2 {
-    font-size: 1.8em;
-    margin-top: 40px;
-  }
-  
-  form div {
-    margin-bottom: 25px;
-  }
-  
-  label {
+}
+
+h1 {
+    font-size: 2em; /* Taille de police réduite pour les petits écrans */
+    margin-bottom: 20px; /* Réduire l'espacement */
+}
+
+h2 {
+    font-size: 1.5em; /* Taille de police réduite pour les petits écrans */
+    margin-top: 20px; /* Réduire l'espacement */
+}
+
+form div {
+    margin-bottom: 15px; /* Réduire l'espacement entre les champs */
+}
+
+label {
     display: block;
     margin-bottom: 8px;
     color: #00ffff;
     font-weight: 500;
     font-size: 0.9em;
     text-transform: uppercase;
-  }
-  
-  input, select, textarea {
-    width: 100%;
+}
+
+input, select, textarea {
+    width: 100%; /* S'assurer que les champs ne dépassent pas */
     padding: 12px;
     background-color: #222222;
     border: 1px solid #333333;
@@ -52,18 +52,18 @@ body {
     border-radius: 8px;
     font-size: 1em;
     transition: all 0.3s ease;
-  }
-  
-  input:focus, select:focus, textarea:focus {
+}
+
+input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #00ffff;
     box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2);
-  }
-  
-  button {
+}
+
+button {
     background-color: #00ffff;
     color: #000000;
-    padding: 15px 30px;
+    padding: 15px 20px; /* Ajuster le padding pour un look compact */
     border: none;
     border-radius: 50px;
     cursor: pointer;
@@ -73,91 +73,40 @@ body {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     display: block;
-    margin: 30px auto;
-  }
-  
-  button:hover {
+    margin: 20px auto; /* Réduire la marge pour un look compact */
+    width: 100%; /* S'assurer que le bouton ne dépasse pas */
+}
+
+button:hover {
     background-color: #00cccc;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
-  }
-  
-  ul {
+}
+
+ul {
     list-style-type: none;
     padding: 0;
-  }
-  
-  li {
+}
+
+li {
     background-color: #1a1a1a;
     margin-bottom: 15px;
-    padding: 20px;
+    padding: 15px; /* Réduire le padding pour un look compact */
     border-radius: 10px;
     border-left: 4px solid #00ffff;
     transition: all 0.3s ease;
-  }
-  
-  li:hover {
+}
+
+li:hover {
     transform: translateX(5px);
     background-color: #222222;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 600px) {
-    .container {
-      padding: 20px;
-    }
-  
-    h1 {
-      font-size: 2em;
-    }
-  
-    h2 {
-      font-size: 1.5em;
-    }
-  
-    button {
-      width: 100%;
-    }
-  }
+}
 
-  .item-list {
-    list-style-type: none; /* Supprime les puces */
+.item-list {
     padding: 0; /* Supprime le padding par défaut */
-    background-color: #2c2c2c; /* Fond sombre */
-    color: #ffffff; /* Couleur de texte blanche */
-    border-radius: 8px; /* Coins arrondis */
-    padding: 10px; /* Ajoute un peu de padding */
-    border: 1px solid #00ffff; /* Ajout d'une bordure pour la liste */
-    font-family: 'Arial', sans-serif; /* Police pour une meilleure lisibilité */
-  }
-  
-  .item {
-    padding: 15px; /* Ajoute du padding autour de chaque élément */
-    border-bottom: 1px solid #444; /* Ligne de séparation entre les éléments */
-    display: flex; /* Utilisation de flex pour aligner les boutons */
-    justify-content: space-between; /* Espacement entre le texte et les boutons */
-    align-items: center; /* Alignement vertical */
-    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
-  }
-  
-  .item:hover {
-    background-color: #333333; /* Couleur de fond au survol */
-  }
-  
-  .item-category {
-    font-weight: bold; /* Met en gras la catégorie */
-    text-transform: capitalize; /* Met la première lettre en majuscule */
-    margin-right: 10px; /* Espacement à droite */
-  }
-  
-  .item-description {
-    font-size: 0.9em; /* Taille de police légèrement réduite pour la description */
-    color: #cccccc; /* Couleur de texte pour la description */
-  }
-  
-  /* Styles pour les boutons */
-  button {
-    margin-left: 10px; /* Espacement entre les boutons */
-    padding: 10px; /* Ajustement du padding pour les boutons */
-    font-size: 0.9em;
-  }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    /* Les styles ci-dessus sont déjà optimisés pour mobile */
+}
